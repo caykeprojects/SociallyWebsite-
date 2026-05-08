@@ -1,0 +1,127 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset global para remover margens e paddings padrão e aplicar box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo da seção hero com imagem de fundo e altura total da tela */
+.Hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(pictures/back-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos da barra de navegação para alinhar itens em linha */
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tamanho da imagem do logotipo */
+.logo {
+    width: 140px;
+}
+
+/* Remove marcadores e define espaçamento entre os itens do menu */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+/* Estilo dos links do menu de navegação */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Estilo do botão de login na navegação */
+.login-btn {
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Estilo básico dos botões principais */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+    color: #fff;
+}
+
+/* Container do conteúdo principal com margem superior e largura máxima */
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+/* Estilo do título principal dentro da seção content */
+.content h1 {
+    font-size: 70px;
+    color: #222;
+    animation-delay: 1.5s;
+}
+
+/* Estilo do parágrafo de descrição dentro da seção content */
+.content p {
+    color: #333;
+    margin: 10px 0 30px;
+    animation-delay: 0.5s;
+}
+
+/* Estilo específico do botão presente dentro de .content */
+.content .btn {
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+/* Efeito hover para suavizar o canto do botão */
+.btn:hover {
+    border-top-right-radius: 30px;
+}
+
+/* Imagem principal da seção hero, posicionada no canto inferior direito */
+.recursos-img {
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* Classe de animação que define estado inicial antes da transição */
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+/* Animação que faz o elemento subir e aparecer */
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
